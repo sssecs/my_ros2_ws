@@ -1,0 +1,8 @@
+source;share/toybox1_bringup/hook/cmake_prefix_path.ps1
+source;share/toybox1_bringup/hook/cmake_prefix_path.dsv
+source;share/toybox1_bringup/hook/cmake_prefix_path.sh
+source;share/toybox1_bringup/local_setup.bash
+source;share/toybox1_bringup/local_setup.dsv
+source;share/toybox1_bringup/local_setup.ps1
+source;share/toybox1_bringup/local_setup.sh
+source;share/toybox1_bringup/local_setup.zsh
