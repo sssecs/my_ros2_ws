@@ -28,6 +28,25 @@
         <plugin name="gazebo_ros2_control" filename="libgazebo_ros2_control.so">
             <parameters>$(find articubot_one)/config/my_controllers.yaml</parameters>
         </plugin>
+
+        <plugin name="gazebo_ros_p3d" filename="libgazebo_ros_p3d.so">
+
+            <ros>
+                <!-- Add namespace and remap the default topic -->
+                <namespace>/toybox1</namespace>
+                <remapping>odom:=p3d_demo</remapping>
+            </ros>
+
+            <!-- Replace camelCase elements with camel_case ones -->
+            <body_name>base_link</body_name>
+            <frame_name>world</frame_name>
+            <update_rate>30</update_rate>
+            <xyz_offset>0 0 0</xyz_offset>
+            <rpy_offset>0 0 0</rpy_offset>
+            <gaussian_noise>0.01</gaussian_noise>
+
+        </plugin>
+
     </gazebo>
 
 </robot>
