@@ -20,6 +20,7 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
+            "toybox1_odom = toybox1_odom.toybox1_odom:main"
         ],
     },
 )
