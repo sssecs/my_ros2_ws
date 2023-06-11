@@ -21,13 +21,13 @@ class JoySubscriber(Node):
     
     def PublishVeloCmd(self,cmd_recive : Joy):
         cmd_left_joy = cmd_recive.axes[0]
-        cmd_right_trigger = -(cmd_recive.axes[4]-1)
-        cmd_left_trigger = -(cmd_recive.axes[5]-1)
+        cmd_right_trigger = -(cmd_recive.axes[5]-1)
+        cmd_left_trigger = -(cmd_recive.axes[2]-1)
 
         if self.CloseTo(cmd_left_trigger,0):
-            velo = cmd_right_trigger * 0.5
+            velo = cmd_right_trigger * 0.25
         else:
-            velo = - cmd_left_trigger  * 0.5
+            velo = - cmd_left_trigger  * 0.25
 
         omega = cmd_left_joy * math.pi
 
